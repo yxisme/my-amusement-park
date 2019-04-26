@@ -9,6 +9,9 @@ import java.util.Scanner;
  */
 public class Client {
 
+    private final static String HOST = "47.112.22.75";
+    private final static int PORT = 9999;
+
     private Socket server;
 
     public static void main(String[] args) {
@@ -17,7 +20,7 @@ public class Client {
 
     private Client() {
         try {
-            server = new Socket("127.0.0.1", 9999);
+            server = new Socket(HOST, PORT);
             System.out.println("连接服务器(" + server.getRemoteSocketAddress() + ")成功！");
 
             // 填写用户名
